@@ -1,0 +1,43 @@
+.custom-accordion {
+  width: 100%;
+  margin-bottom: 10px;
+
+  &__header {
+    width: 100%;
+    border: none;
+    outline: none;
+    background-color: #f1f1f1;
+    @include flex(space-between, center);
+    padding: 10px;
+    width: 100%;
+    color: #00000087;
+    font-weight: 600;
+
+    &.show {
+      color: $main-color;
+      .icon {
+        transform: rotate(180deg);
+        transition: transform 0.3s ease;
+        color: $main-color;
+      }
+    }
+
+    &:hover {
+      color: $main-color;
+    }
+  }
+
+  &__body {
+    @include flex(center, flex-start);
+    flex-direction: column;
+    overflow: hidden;
+    transition: all 0.3s linear;
+    padding: 5px 10px 5px 15px;
+    display: none;
+  }
+
+  .show ~ &__body {
+    display: flex;
+    background-color: #f1f1f1c9;
+  }
+}

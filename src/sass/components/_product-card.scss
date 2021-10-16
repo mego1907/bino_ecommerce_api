@@ -1,0 +1,91 @@
+.product-card {
+  &__image {
+    padding-top: 110%;
+    @include flex(center, center);
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 14px;
+    transform: translateX(0);
+    cursor: pointer;
+
+    img {
+      width: 100%;
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      height: 100%;
+
+      &:nth-child(1) {
+        transform: translateX(-50%) scale(1);
+        transition: transform 0.5s ease;
+      }
+
+      &:nth-child(2) {
+        transform: translateX(-50%) scale(0);
+      }
+    }
+
+    &:hover img {
+      &:nth-child(1) {
+        transform: translateX(-50%) scale(0);
+      }
+
+      &:nth-child(2) {
+        transform: translateX(-50%) scale(1);
+        transition: transform 0.5s ease;
+      }
+    }
+  }
+  &__title {
+    font-size: 13px;
+    //
+    text-align: center;
+    //
+  }
+
+  &__info {
+    //
+    @include flex(center, center);
+    flex-direction: column;
+    //
+    position: relative;
+    &__price {
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: $main-color;
+      margin-bottom: 10px;
+    }
+    &__rating {
+      padding: 0;
+      margin: 0;
+      display: flex;
+      &__item {
+        color: #ff9500;
+      }
+    }
+    &__btn {
+      width: 40px;
+      height: 40px;
+      position: absolute;
+      top: 8px;
+      right: 10px;
+      cursor: pointer;
+      z-index: 15;
+      border: 1px solid $main-color;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50%;
+      color: $main-color;
+      font-size: 1.3rem;
+      transition: all 0.3s ease;
+
+      &:hover {
+        background-color: $main-color;
+        color: $txt-white;
+        transform: rotate(360deg);
+      }
+    }
+  }
+}

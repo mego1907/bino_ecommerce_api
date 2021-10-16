@@ -1,0 +1,27 @@
+.policies {
+  padding: 3rem 0;
+  &__card {
+    @include flex(center, center);
+    flex-direction: column;
+    &__imgs {
+      width: 200px;
+      height: 100px;
+      @include flex(center, center);
+      .icon {
+        margin-bottom: 15px;
+      }
+    }
+    &__content {
+      text-align: center;
+      h3 {
+        font-family: "Alata", sans-serif;
+        font-size: 1.8rem;
+        color: #222;
+      }
+      p {
+        // color: rgba(#000, 0.7);
+        color: $txt-third-color;
+      }
+    }
+  }
+}

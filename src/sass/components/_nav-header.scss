@@ -1,0 +1,55 @@
+.nav-header {
+  height: 30px;
+  background-color: $main-bg;
+  border-bottom: 1px solid #e1e1e1;
+  &__connect {
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    &__phone {
+      display: flex;
+      margin-right: 10px;
+    }
+
+    &__email {
+      display: flex;
+    }
+
+    &__icon {
+      margin: 5px 7px;
+      color: #e18f8f;
+      font-size: 16px;
+    }
+
+    &__txt {
+      margin: 0;
+      font-size: 16px;
+      color: $txt-second-color;
+    }
+
+    @include mobile {
+      display: none;
+    }
+  }
+
+  &__details {
+    height: 30px;
+    @include flex(flex-end, center);
+
+    @include mobile {
+      justify-content: center;
+    }
+    select {
+      margin-left: 20px;
+      border: none;
+      outline: none;
+      background-color: $main-bg;
+      font-size: 14px;
+      @include mobile {
+        margin-left: 10px;
+      }
+    }
+  }
+}

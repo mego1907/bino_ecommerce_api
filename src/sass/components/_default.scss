@@ -1,0 +1,15 @@
+.default {
+  width: 100%;
+  height: calc(100vh - 100px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  h2 {
+    font-size: 7rem;
+    color: #dc3545;
+  }
+  .icon {
+    font-size: 1.7rem;
+    margin-right: 3px;
+  }
+}

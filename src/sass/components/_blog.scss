@@ -1,0 +1,145 @@
+.blog {
+  &__title {
+    font-size: 1.8rem;
+    font-family: "Alata", sans-serif;
+    padding: 1rem 0 1.5rem;
+    position: relative;
+    display: inline-block;
+    &::after {
+      content: "";
+      width: 75px;
+      height: 2px;
+      background-color: $main-color;
+      position: absolute;
+      bottom: 15px;
+      left: 0;
+      // transform: translateX(-50%);
+    }
+  }
+
+  &__sidebar {
+    margin: 4rem 0;
+    padding-left: 4rem;
+    position: sticky;
+    top: 10px;
+
+    @include tablet {
+      margin: 1rem 0;
+      padding: 0;
+    }
+
+    @include mobile {
+      margin: 1rem 0;
+      position: unset;
+      padding: 0;
+    }
+
+    &__search {
+      position: relative;
+      margin-bottom: 1.2rem;
+      &__input {
+        width: 100%;
+        padding: 8px 20px;
+        outline: none;
+        border: 1px solid #eaeaea;
+
+        &::placeholder {
+          color: $txt-second-color;
+        }
+      }
+      &__icon {
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translateY(-50%);
+        font-size: 1.2rem;
+        padding: 8px;
+        cursor: pointer;
+        color: $main-color;
+      }
+    }
+
+    &__title {
+      font-size: 0.9rem;
+      font-weight: bold;
+      font-family: "Poppins";
+      margin-bottom: 1rem;
+    }
+
+    &__content {
+      margin-bottom: 3rem;
+      p {
+        font-size: 0.9rem;
+        color: $txt-third-color;
+        margin-top: 1rem;
+        line-height: 1.7;
+      }
+
+      &__post {
+        @include flex(center, center);
+        margin-bottom: 1.2rem;
+        cursor: pointer;
+
+        @include tablet {
+          @include flex(flex-start, center);
+          flex-direction: column;
+        }
+
+        @include mobile {
+          @include flex(flex-start, center);
+          flex-direction: row;
+        }
+
+        &__image {
+          width: 150px;
+        }
+        &__info {
+          padding-left: 1rem;
+          h6 {
+            font-size: 0.9rem;
+            max-width: 15ch;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            transition: color 0.3s ease-in-out;
+
+            &:hover {
+              color: $main-color;
+            }
+          }
+          p {
+            line-height: 0;
+            color: rgba($main-color, 0.6);
+            font-size: 0.7rem;
+            font-weight: bold;
+          }
+        }
+      }
+    }
+
+    &__banner {
+      &__image {
+        overflow: hidden;
+        position: relative;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+        &::after {
+          content: "";
+          width: 100%;
+          height: 100%;
+          background-color: rgba(#000, 0.5);
+          position: absolute;
+          top: 0;
+          left: 0;
+          transform: scale(0);
+          transition: all 0.3s ease-in-out;
+        }
+        &:hover {
+          &::after {
+            transform: scale(1);
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,33 @@
+.home {
+  &__collections {
+    margin: 40px 0 60px;
+    &__category {
+      position: relative;
+      border: 1px solid #333;
+      &__content {
+        position: absolute;
+        left: 25px;
+        top: 25px;
+
+        @include tablet {
+          left: 10px;
+          top: 10px;
+        }
+
+        @include mobile {
+          left: 25px;
+          top: 25px;
+        }
+      }
+      &__image {
+        width: 100%;
+      }
+      &:hover {
+        h3,
+        p {
+          color: #000;
+        }
+      }
+    }
+  }
+}

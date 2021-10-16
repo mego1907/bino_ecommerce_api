@@ -1,0 +1,84 @@
+$menBg: rgba(#1a2030, 0.73);
+$girlBg: rgba(#d86e01, 0.67);
+$menBtnBg: #1a2031;
+$girlBtnBg: rgba(#87502d, 0.62);
+
+.banner {
+  padding: 3rem 0;
+
+  &__widget {
+    height: 200px;
+    position: relative;
+    background-color: $girlBg;
+    overflow: hidden;
+    @include flex(space-between, center);
+
+    @include mobile {
+      height: 180px;
+    }
+
+    &__content {
+      margin-left: 30px;
+
+      @include mobile {
+        margin-left: 10px;
+      }
+
+      @include tablet {
+        margin-left: 10px;
+      }
+
+      &__title {
+        font-size: 1.5rem;
+        font-family: "Poppins", "roboto", sans-serif;
+        color: $txt-white;
+      }
+      &__description {
+        color: $txt-white;
+        font-family: "Poppins", "roboto", sans-serif;
+        text-transform: uppercase;
+        margin-bottom: 30px;
+
+        @include mobile {
+          font-size: 15px;
+        }
+      }
+      &__btn {
+        color: $txt-white;
+        background-color: $girlBtnBg;
+        padding: 10px 25px;
+        &:hover {
+          color: $txt-white;
+        }
+      }
+    }
+    &__img {
+      img {
+        width: 400px;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+      }
+      @include mobile {
+        height: 180px;
+        img {
+          right: -81px;
+        }
+      }
+      @include tablet {
+        height: 180px;
+        img {
+          right: -81px;
+        }
+      }
+    }
+  }
+  &__men {
+    background-color: $menBg;
+    &__content {
+      &__btn {
+        background-color: $menBtnBg !important;
+      }
+    }
+  }
+}

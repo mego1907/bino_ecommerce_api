@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="90.166" height="102.995" viewBox="0 0 90.166 102.995">
+  <g id="Return_Money_Icon" data-name="Return Money Icon" transform="translate(-756.745 -871.5)">
+    <path id="Path_7" data-name="Path 7" d="M-5059.568-1860.283l-.687,26.811h12.375l1.031-26.811Z" transform="translate(5820 2803.343)" fill="none" stroke="#ef2d68" stroke-linecap="round" stroke-linejoin="round" stroke-width="6"/>
+    <path id="Path_8" data-name="Path 8" d="M-4990.961-1849.591v19.913s5.751-3.657,7.556-2.87,23.26,6.425,23.26,6.425,10.02.895,12.524-2.5,27.161-17.9,27.161-17.9-.686-4.717-6.032-3.288-13.551,6.087-13.551,6.087l-3.123,1.747s-1.938-5.729-6.092-6.3-15.982-.635-15.982-.635-13.444-7.358-21.067-2.805-1.641.9-1.641.9Z" transform="translate(5764.111 2797.44)" fill="none" stroke="#ef2d68" stroke-width="6"/>
+    <path id="Path_9" data-name="Path 9" d="M-4822.778-1796.986v2.546l-19.337-.275" transform="translate(5644.061 2752.29)" fill="none" stroke="#ef2d68" stroke-linejoin="round" stroke-width="5"/>
+    <g id="Ellipse_4" data-name="Ellipse 4" transform="translate(780.372 897.5)" fill="none" stroke="#ef2d68" stroke-width="5">
+      <ellipse cx="22.5" cy="22" rx="22.5" ry="22" stroke="none"/>
+      <ellipse cx="22.5" cy="22" rx="20" ry="19.5" fill="none"/>
+    </g>
+    <line id="Line_3" data-name="Line 3" y2="7.545" transform="translate(790.651 883.819)" fill="none" stroke="#ef2d68" stroke-linecap="round" stroke-width="8"/>
+    <line id="Line_4" data-name="Line 4" y2="15.864" transform="translate(803.032 875.5)" fill="none" stroke="#ef2d68" stroke-linecap="round" stroke-width="8"/>
+    <line id="Line_5" data-name="Line 5" y2="7.545" transform="translate(815.22 883.819)" fill="none" stroke="#ef2d68" stroke-linecap="round" stroke-width="8"/>
+    <text id="_" data-name="$" transform="translate(794.372 929.5)" fill="#ef2d68" font-size="27" font-family="Poppins-SemiBold, Poppins" font-weight="600"><tspan x="0" y="0">$</tspan></text>
+  </g>
+</svg>

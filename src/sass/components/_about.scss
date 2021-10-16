@@ -1,0 +1,85 @@
+.about {
+  &__top {
+    padding: 2rem 0;
+
+    &__content {
+      &__title {
+        font-size: 1.7rem;
+        font-family: "Poppins", "Alata", sans-serif;
+        font-weight: bold;
+        padding: 0.8rem 0;
+      }
+      p {
+        color: $txt-third-color;
+        font-size: 15px;
+      }
+    }
+  }
+
+  &__info {
+    margin: 2rem 0;
+    &__questions {
+      &__title {
+        padding: 1rem 0;
+      }
+    }
+    &__operation-contact {
+      margin-left: 3.5rem;
+
+      @include tablet {
+        margin-left: 2rem;
+      }
+
+      @include mobile {
+        margin-left: 0;
+      }
+
+      &__title {
+        padding: 1rem 0;
+        font-size: 1.1rem;
+      }
+
+      &__list {
+        margin: 0;
+        margin-top: 10px;
+        padding: 0;
+        &__item {
+          @include flex(space-between, center);
+          padding: 10px 0;
+          font-family: "Poppins", sans-serif;
+          font-size: 1rem;
+        }
+      }
+
+      &__career {
+        margin-top: 3rem;
+        &__title {
+          font-size: 1.1rem;
+          font-weight: bold;
+          padding: 8px 0;
+        }
+
+        &__content {
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+
+  &__team {
+    padding: 2rem 0;
+    &__title {
+      font-size: 2.5rem;
+      font-weight: bold;
+      font-family: "Alata", sans-serif;
+      text-align: center;
+      padding: 0 0 20px;
+    }
+    &__list {
+      @include flex(center, center);
+      @include mobile {
+        flex-wrap: wrap;
+      }
+    }
+  }
+}

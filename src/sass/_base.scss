@@ -1,0 +1,76 @@
+/* import Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Alata&family=Poppins:wght@400;500;600;700;900&family=Roboto:wght@400;500;700;900&display=swap");
+/* Global Style */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  user-select: none;
+}
+
+// html {
+//   font-size: 13px;
+// }
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: unset;
+}
+
+a:hover {
+  color: $main-color;
+}
+
+button {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+.form-check-input:checked {
+  background-color: $main-color !important;
+  border-color: $main-color !important;
+}
+
+@each $color, $val in $colors {
+  .bg-#{$color} {
+    background-color: $val;
+  }
+}
+
+@each $val in $numbers {
+  .grid-col-#{$val} {
+    grid-template-columns: repeat($val, 1fr);
+  }
+}
+
+@each $val in $numbers {
+  .grid-col-md-#{$val} {
+    @include tablet {
+      grid-template-columns: repeat($val, 1fr);
+    }
+  }
+}
+
+@each $val in $numbers {
+  .grid-col-sm-#{$val} {
+    @include mobile {
+      grid-template-columns: repeat($val, 1fr);
+    }
+  }
+}
+
+.grid {
+  display: grid;
+}

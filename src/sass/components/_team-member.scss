@@ -1,0 +1,31 @@
+.team-member {
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  &:hover &__image {
+    img {
+      opacity: 0.8;
+    }
+  }
+
+  &:hover &__name {
+    color: $main-color;
+  }
+
+  &__image {
+    img {
+      border-radius: 50%;
+    }
+  }
+
+  &__name {
+    margin: 15px 0 8px;
+    font-size: 1.1rem;
+  }
+
+  &__job {
+    font-size: 1rem;
+    color: $txt-third-color;
+  }
+}

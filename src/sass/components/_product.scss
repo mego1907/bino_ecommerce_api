@@ -1,0 +1,203 @@
+.product {
+  @include flex(flex-start, flex-start);
+
+  @include mobile {
+    flex-direction: column;
+  }
+
+  &__images {
+    @include flex(flex-start, flex-start);
+    width: 60%;
+    flex-wrap: wrap;
+
+    @include tablet {
+      width: 80%;
+    }
+
+    @include mobile {
+      width: 100%;
+    }
+
+    &__list {
+      width: 20%;
+
+      &__item {
+        cursor: pointer;
+      }
+    }
+
+    &__main {
+      flex-grow: 1;
+      padding-top: 100%;
+      position: relative;
+
+      img {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        height: 100%;
+      }
+    }
+  }
+
+  &__info {
+    flex-grow: 1;
+    position: sticky;
+    top: $navbar-shrink-height;
+    padding-top: 2rem;
+    width: 40%;
+
+    @include mobile {
+      width: 100%;
+      padding-top: 1rem;
+    }
+
+    &__title {
+      font-size: 2.3rem;
+      font-weight: normal;
+      font-family: "Alata", "roboto", sans-serif;
+
+      @include mobile {
+        font-size: 1.8rem;
+      }
+    }
+
+    &__item {
+      margin-top: 1.5rem;
+
+      @include tablet {
+        margin-top: 1rem;
+      }
+
+      @include mobile {
+        margin-top: 0.8rem;
+      }
+
+      &__price {
+        color: $main-color;
+        font-size: 2rem;
+        font-weight: 600;
+
+        @include mobile {
+          font-size: 1.5rem;
+        }
+      }
+
+      &__title {
+        margin-bottom: 1rem;
+
+        @include mobile {
+          margin-bottom: 0.5rem;
+        }
+
+        h6 {
+          font-size: 1.5rem;
+          font-weight: 600;
+          font-family: "Poppins", sans-serif;
+        }
+      }
+
+      &__list {
+        @include flex(flex-start, center);
+        flex-wrap: wrap;
+
+        &__item {
+          @include flex(center, center);
+
+          width: 50px;
+          min-width: 50px;
+          height: 50px;
+          min-height: 50px;
+          border-radius: 50%;
+          border: 2px solid $txt-second-color;
+          cursor: pointer;
+          margin-right: 1rem;
+          margin-bottom: 1rem;
+          font-weight: bold;
+          color: $txt-third-color;
+
+          @include mobile {
+            width: 40px;
+            min-width: 40px;
+            height: 40px;
+            min-height: 40px;
+          }
+
+          .circle {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            @include flex(center, center);
+
+            .icon {
+              color: $main-color;
+              font-size: 18px;
+              display: none;
+            }
+
+            @include mobile {
+              width: 30px;
+              height: 30px;
+            }
+          }
+
+          &.active {
+            border-color: $main-color;
+            color: $main-color;
+
+            .circle {
+              .icon {
+                display: block;
+              }
+            }
+          }
+
+          &:hover {
+            border-color: $main-color;
+            color: $main-color;
+          }
+
+          &__size {
+            font-size: 1.2rem;
+            font-family: "Alate", sans-serif;
+            text-transform: uppercase;
+
+            @include mobile {
+              font-size: 1rem;
+            }
+          }
+        }
+      }
+
+      &__quantity {
+        @include flex(flex-start, flex-start);
+
+        &__btn {
+          @include flex(center, center);
+          width: 30px;
+          height: 30px;
+          border: 2px solid $txt-second-color;
+          cursor: pointer;
+
+          &:hover {
+            color: $main-color;
+            border-color: $main-color;
+          }
+        }
+
+        &__input {
+          @include flex(center, center);
+          height: 30px;
+          width: 90px;
+          font-size: 1.5rem;
+        }
+      }
+
+      button {
+        margin-right: 1rem;
+        margin-bottom: 1rem;
+      }
+    }
+  }
+}

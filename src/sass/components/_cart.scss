@@ -1,0 +1,124 @@
+.cart {
+  @include flex(flex-start, flex-start);
+  // min-height: 100vh;
+
+  @include mobile {
+    flex-wrap: wrap;
+  }
+
+  @include tablet {
+    flex-wrap: wrap;
+  }
+
+  &__info {
+    width: 30%;
+    margin-right: 30px;
+    margin-top: 30px;
+    padding: 20px;
+    box-shadow: $box-shadow;
+    position: sticky;
+    top: calc(#{$navbar-shrink-height} + 20px);
+
+    @include tablet {
+      width: 100%;
+      margin-right: 0;
+      margin-bottom: 30px;
+      position: unset;
+    }
+
+    @include mobile {
+      width: 100%;
+      margin-right: 0;
+      margin-bottom: 30px;
+      position: unset;
+    }
+
+    &__txt {
+      & > * {
+        margin-bottom: 10px;
+      }
+
+      p {
+        font-size: 1.25rem;
+      }
+
+      &__price {
+        @include flex(space-between, flex-start);
+        padding: 10px 0;
+        font-size: 1.25rem;
+
+        span:nth-child(2) {
+          font-size: 1.6rem;
+          color: $main-color;
+          font-family: "Poppins", sans-serif;
+          font-weight: 600;
+        }
+      }
+    }
+
+    &__btn > * {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__list {
+    flex-grow: 1;
+    margin-top: 1.5rem;
+  }
+
+  &__item {
+    @include flex(flex-start, center);
+    margin-bottom: 20px;
+
+    &__image {
+      margin-right: 20px;
+      img {
+        height: 150px;
+      }
+    }
+
+    &__info {
+      @include flex(space-between, center);
+      flex-grow: 1;
+
+      @include mobile {
+        @include flex(center, flex-start);
+        flex-direction: column;
+
+        & > * {
+          margin-bottom: 10px;
+        }
+      }
+
+      &__name,
+      &__price {
+        font-size: 1.25rem;
+        font-family: "Poppins", "Roboto", sans-serif;
+      }
+
+      &__name {
+        width: 40%;
+        text-transform: capitalize;
+
+        @include mobile {
+          width: 100%;
+          font-size: 1rem;
+        }
+      }
+
+      &__del {
+        font-size: 1.5rem;
+
+        .icon {
+          cursor: pointer;
+          transition: transform 0.3s ease;
+
+          &:hover {
+            color: $main-color;
+            transform: rotate(360deg) scale(1.1);
+          }
+        }
+      }
+    }
+  }
+}

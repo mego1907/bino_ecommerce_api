@@ -1,0 +1,114 @@
+$secondColor: #1a1a1a;
+.hero-slider {
+  position: relative;
+  &__slider {
+    height: 600px;
+    overflow: hidden;
+
+    @include mobile {
+      height: 300px;
+    }
+
+    &__item {
+      &__info {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+
+        @include mobile {
+          text-align: center;
+        }
+
+        h6 {
+          font-size: 20px;
+          font-weight: bold;
+          color: #636262;
+        }
+
+        h1 {
+          font-size: 70px;
+          font-family: "Alata", "roboto", sans-serif;
+          color: $main-color;
+          padding: 20px 0;
+          border-bottom: 1px solid rgba(112, 112, 112, 0.37);
+
+          @include mobile {
+            font-size: 2rem;
+            padding: 8px 0;
+          }
+        }
+        p {
+          font-size: 20px;
+          font-family: "roboto", sans-serif;
+          padding: 20px 0;
+          margin-bottom: 3rem;
+          text-transform: uppercase;
+          color: #222222d1;
+
+          @include mobile {
+            padding: 8px 0;
+            margin: 10px 0;
+          }
+        }
+        .home__btn {
+          text-decoration: none;
+          background-color: $secondColor;
+          color: #fff;
+          padding: 13px 35px;
+          transition: all 0.3s linear;
+
+          .icon {
+            font-size: 1.2rem;
+            color: #fff;
+            transform: translateX(5px);
+            transition: all 0.3s linear;
+          }
+
+          &:hover {
+            background-color: $main-color;
+            .icon {
+              transform: translateX(12px);
+            }
+          }
+        }
+      }
+      &__image {
+        img {
+          position: absolute;
+          bottom: 0;
+          width: 450px;
+          right: 100px;
+          z-index: -1;
+
+          @include mobile {
+            right: 0;
+            width: 260px;
+          }
+        }
+      }
+    }
+  }
+
+  &__control {
+    &__item {
+      z-index: 2;
+      position: absolute;
+      top: 50%;
+      left: 10px;
+      transform: translateY(-50%);
+      font-size: 1.8rem;
+      color: rgba(0, 0, 0, 0.6);
+      border: none;
+      background-color: transparent;
+
+      &:hover {
+        color: $main-color;
+      }
+
+      &:last-of-type {
+        right: 10px;
+        left: unset;
+      }
+    }
+  }
+}

@@ -1,0 +1,37 @@
+.custom-checkbox {
+  @include flex(center, center);
+  margin-bottom: 8px;
+  cursor: pointer;
+
+  input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    width: 0;
+    height: 0;
+  }
+
+  &__checkmark {
+    margin-right: 10px;
+    height: 18px;
+    width: 18px;
+    border: 1px solid $txt-second-color;
+    @include flex(center, center);
+
+    &__icon {
+      font-size: 18px;
+      transform: scale(0);
+      transition: transform 0.3s ease;
+    }
+  }
+
+  input:checked ~ &__checkmark {
+    background-color: $main-color;
+    border: 1px solid $main-color;
+    color: $txt-white;
+  }
+
+  input:checked ~ &__checkmark > svg {
+    transform: scale(1);
+  }
+}

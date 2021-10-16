@@ -1,0 +1,73 @@
+.title {
+  text-align: center;
+  margin: 2rem 0 1rem;
+  overflow: hidden;
+  &__info {
+    width: 400px;
+    &__heading {
+      font-size: 2rem;
+      font-weight: bold;
+      position: relative;
+      font-family: "Alata", sans-serif;
+
+      &::after {
+        content: "\002737";
+        position: absolute;
+        top: 50%;
+        right: 36px;
+        transform: translateY(-50%);
+        font-size: 24px;
+        color: $main-color;
+      }
+
+      &::before {
+        content: "\002737";
+        position: absolute;
+        top: 50%;
+        left: 36px;
+        transform: translateY(-50%);
+        font-size: 24px;
+        color: $main-color;
+      }
+
+      @include mobile {
+        font-size: 1.4rem;
+        overflow: hidden;
+        &::after {
+          right: 30px;
+        }
+        &::before {
+          left: 30px;
+        }
+      }
+
+      span {
+        position: absolute;
+        top: 50%;
+        left: -27px;
+        transform: translateY(-50%);
+        background-color: $main-color;
+        height: 3px;
+        width: 70px;
+        &:last-of-type {
+          right: -27px;
+          left: unset;
+        }
+
+        @include mobile {
+          span {
+            left: -50px;
+            &:last-of-type {
+              right: -50px;
+            }
+          }
+        }
+      }
+    }
+    &__description {
+      font-size: 15px;
+      font-family: "Alata", sans-serif;
+      color: $txt-second-color;
+    }
+  }
+}

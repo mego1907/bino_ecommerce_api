@@ -1,0 +1,48 @@
+.popular-products {
+  margin-bottom: 3rem;
+  &__info {
+    &__category {
+      @include flex(center, center);
+      &__list {
+        display: flex;
+        &__item {
+          margin: 20px;
+          font-weight: bold;
+          position: relative;
+          cursor: pointer;
+          padding: 5px 0;
+          font-size: 17px;
+          font-family: "roboto", sans-serif;
+
+          &::after {
+            content: "";
+            width: 0;
+            height: 2px;
+            background-color: $main-color;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            transition: all 0.3s linear;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
+        }
+        &__item.active,
+        &__item:hover {
+          color: $main-color;
+          &::after {
+            width: 70%;
+          }
+        }
+        @include mobile {
+          padding: 0;
+          &__item {
+            margin: 12px;
+            font-size: 16px;
+          }
+        }
+      }
+    }
+  }
+}

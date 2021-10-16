@@ -1,0 +1,16 @@
+.shop {
+  display: flex;
+
+  @include tablet {
+    flex-direction: column;
+  }
+
+  &__products {
+    width: 80%;
+    padding: 0 20px;
+
+    @include tablet {
+      width: 100%;
+    }
+  }
+}
