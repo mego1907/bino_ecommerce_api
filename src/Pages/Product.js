@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import Helmet from "../components/Helmet";
-import { Container } from 'react-bootstrap'
+import { Container } from "react-bootstrap";
 
 import { useSelector } from "react-redux";
 import ProductView from '../components/ProductView';
@@ -15,7 +15,7 @@ const Product = (props) => {
   const product = useSelector(state => state.shopping.currentItem)
 
   // const { data } = useFetchData("http://localhost:5000/products");
-  const { data } = useFetchData(
+  const { data, loading } = useFetchData(
     "https://api.npoint.io/402b2b47fdf3738c33c2/products"
   );
   

@@ -4,8 +4,7 @@ import { Container, Row, Col } from 'react-bootstrap'
 // import swiper react component
 import { Swiper, SwiperSlide } from 'swiper/react';
 import SwiperCore, { Navigation } from 'swiper'
-// Import Swiper styles
-import "swiper/swiper.scss";
+
 
 import Button from "./Button"
 // import icons from react-icons
@@ -47,31 +46,11 @@ const HomeHeader = ({ data }) => {
         {
           data && data.map((item, index) => (
             <SwiperSlide key={index} className="hero-slider__slider__item">
-              <Container>
-                <Row>
-                  <Col md={6} sm={12}>
-                    <div className="hero-slider__slider__item__info">
-                      <h6>
-                        <span>{item.heading}</span>
-                      </h6>
-                      <h1>
-                        <span>{item.title}</span>
-                      </h1>
-                      <p>
-                        <span>{item.description}</span>
-                      </p>
-                      <Link to="/shop">
-                        <Button >
-                          Shop Now
-                        </Button>
-                      </Link>
-                    </div>
-                  </Col>
-                </Row>
-                <div className="hero-slider__slider__item__image">
-                  <img src={item.img} alt="" />
-                </div>
-              </Container>
+              {
+                ({ isActive }) => (
+                  <HeroSlideItem item={item} active={`${isActive ? "active" : ""}`} />
+                )
+              }
             </SwiperSlide>
           ))
         }
@@ -89,5 +68,38 @@ const HomeHeader = ({ data }) => {
   );
 };
 
+const HeroSlideItem = (props) => {
+
+  const item = props.item;
+  const active = props.active;
+
+  return (
+    <Container>
+      <Row>
+        <Col md={6} sm={12}>
+          <div className={`hero-slider__slider__item__info ${active}`}>
+            <h6>
+              <span>{item.heading}</span>
+            </h6>
+            <h1>
+              <span>{item.title}</span>
+            </h1>
+            <p>
+              <span>{item.description}</span>
+            </p>
+            <div className="btns">
+              <Link to="/shop">
+                <Button>Shop Now</Button>
+              </Link>
+            </div>
+          </div>
+        </Col>
+      </Row>
+      <div className="hero-slider__slider__item__image">
+        <img src={item.img} alt="" />
+      </div>
+    </Container>
+  );
+}
 
 export default HomeHeader

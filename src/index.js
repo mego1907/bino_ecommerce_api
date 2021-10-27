@@ -6,6 +6,8 @@ import store from './redux/store'
 import "bootstrap/dist/css/bootstrap.min.css";
 // import styles
 import "./sass/index.scss"
+// Import Swiper styles
+import "swiper/swiper.scss";
 
 import MainLayout from './layouts/MainLayout';
 
